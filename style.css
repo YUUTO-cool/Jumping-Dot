@@ -1,0 +1,46 @@
+#dot {
+  background-color: lightskyblue;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 0px 7px 5px rgba(255, 255, 255, 0.75);
+  transition: top 0.8s, left 0.8s, background-color 0.3s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+#wrapper {
+  background-color: transparent;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.8s, left 0.8s;
+  z-index: 2;
+}
+body, html {
+  background-color: black;
+  overflow: hidden;
+}
+#arrow {
+  color: white;
+  position: absolute;
+  top: calc(50% - 0.5em);
+  left: 60%;
+  font-size: 5rem;
+  animation: move-arrow 1s ease 0s infinite alternate none;
+  transition: opacity 0.5s;
+}
+@keyframes move-arrow {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
